@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Browser tests</title>
+  </head>
+  <body>
+    <script type="text/javscript">window.timeout = <%= timeout %></script>
+    <script type="text/javascript"><%= js %></script>
+  </body>
+</html>

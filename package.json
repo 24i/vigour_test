@@ -1,0 +1,59 @@
+{
+  "name": "vigour-test",
+  "version": "1.0.0",
+  "description": "Test runner for universal modules",
+  "main": "lib/index.js",
+  "bin": {
+    "vtest": "./bin/test"
+  },
+  "scripts": {
+    "test": "node test | tap-difflet"
+  },
+  "keywords": [
+    "test",
+    "tape",
+    "tap",
+    "browser",
+    "node",
+    "universal",
+    "isomorphic"
+  ],
+  "author": "Vigour <dev@vigour.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigour-io/test/issues"
+  },
+  "contributors": [
+    "Shawn Inder <shawn@vigour.io>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vigour-io/test"
+  },
+  "homepage": "https://github.com/vigour-io/test",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "get-port": "^2.1.0",
+    "lodash.template": "^4.2.2",
+    "nightmare": "^2.2.0",
+    "nightmare-evaluate-async": "^0.1.4",
+    "object-inspect": "^1.1.0",
+    "vigour-config": "^1.0.1",
+    "vigour-fs-promised": "^2.0.2"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "vigour": {
+    "files": {
+      "val": false,
+      "description": "Files to run. Defaults to `path.join(process.cwd(), 'test')`",
+      "env": "TEST_FILES"
+    },
+    "timeout": {
+      "val": 10000,
+      "description": "Delay (in milliseconds) after which the tests are considered to have failed",
+      "env": "TEST_TIMEOUT"
+    }
+  }
+}

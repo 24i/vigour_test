@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+'use strict'
+
+var Service = require('../')
+var service = new Service()
+service.start()
+  .then((status) => {
+    if (status === 'pass') {
+      process.exit(0)
+    } else {
+      if (status === 'timeout') {
+        console.log('Timed out')
+        process.exit(2)
+      } else if (status === 'threw') {
+        console.log('Threw')
+        process.exit(3)
+      } else {
+        process.exit(1)
+      }
+    }
+  })
