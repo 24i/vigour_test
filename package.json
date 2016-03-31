@@ -54,6 +54,14 @@
       "val": 10000,
       "description": "Delay (in milliseconds) after which the tests are considered to have failed",
       "env": "TEST_TIMEOUT"
+    },
+    "quiet": {
+      "val": false,
+      "description": "Set to `true` if you don't want any logs",
+      "env": "TEST_QUIET"
     }
+  },
+  "devDependencies": {
+    "tape": "^4.5.1"
   }
 }
