@@ -41,7 +41,7 @@ console.log = function (msg) {
   }
 }
 try {
-  require('<%= filePath %>')
+  <%= requires %>
 } catch (e) {
   global.logs += e.toString() + '\n'
   global.done = 'threw'
