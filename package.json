@@ -45,6 +45,11 @@
     "node": ">=4"
   },
   "vigour": {
+    "url": {
+      "val": false,
+      "description": "url to load and against which to run the provided tests (see `files`)",
+      "env": "TEST_URL"
+    },
     "files": {
       "val": false,
       "description": "Files to run. Defaults to `path.join(process.cwd(), 'test')`",

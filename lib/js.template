@@ -1,9 +1,8 @@
 'use strict'
 
 var inspect = require('object-inspect')
-
-if (typeof console === 'undefined') {
-  console = {} // eslint-disable-line
+if (typeof global.console === 'undefined') {
+  global.console = {}
 }
 var originalLog = console.log
 

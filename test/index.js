@@ -29,3 +29,17 @@ test('can require multiple files', function (t) {
       t.equal(status, 'pass', 'Tests pass')
     })
 })
+
+test('can execute tests against a live url', function (t) {
+  t.plan(1)
+  var options = {
+    url: 'http://perdu.com/',
+    files: path.join(__dirname, 'files', 'simple.js'),
+    quiet: true
+  }
+  var vtest = new Vtest(options)
+  vtest.start()
+    .then((status) => {
+      t.equal(status, 'pass', 'Tests pass')
+    })
+})
