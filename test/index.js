@@ -4,7 +4,7 @@ var path = require('path')
 var test = require('tape')
 var Vtest = require('../')
 
-test('can run simple tape tests', function (t) {
+test('can run simple tape tests in the browser', function (t) {
   t.plan(1)
   var options = {
     files: path.join(__dirname, 'files', 'simple.js'),
@@ -17,7 +17,7 @@ test('can run simple tape tests', function (t) {
     })
 })
 
-test('can require multiple files', function (t) {
+test('can run multiple files in the browser', function (t) {
   t.plan(1)
   var options = {
     files: [path.join(__dirname, 'files', 'presimple.js'), path.join(__dirname, 'files', 'simple.js')],
