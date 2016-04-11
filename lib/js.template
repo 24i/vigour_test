@@ -26,11 +26,15 @@ console.log = function (msg) {
   }
 
   global.logs += msg + '\n'
-  if (msg.match(/^# ok$/)) {
-    global.done = 'pass'
-  }
-  if (msg.match(/^# fail\s+\d$/)) {
-    global.done = 'fail'
+  try {
+    if (msg.match(/^# ok$/)) {
+      global.done = 'pass'
+    }
+    if (msg.match(/^# fail\s+\d$/)) {
+      global.done = 'fail'
+    }
+  } catch (e) {
+    // ignore
   }
 
   if (typeof originalLog === 'function') {

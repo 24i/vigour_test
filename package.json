@@ -38,16 +38,22 @@
     "nightmare": "^2.2.0",
     "nightmare-evaluate-async": "^0.1.4",
     "object-inspect": "^1.1.0",
-    "vigour-config": "^1.0.1",
-    "vigour-fs-promised": "^2.0.2"
+    "vigour-config": "^1.0.3",
+    "vigour-fs-promised": "^2.0.2",
+    "vigour-spawn": "^1.0.6"
   },
   "engines": {
     "node": ">=4"
   },
   "vigour": {
+    "node": {
+      "val": false,
+      "description": "Whether to run the provided test in node (defaults to false)",
+      "env": "TEST_NODE"
+    },
     "url": {
       "val": false,
-      "description": "url to load and against which to run the provided tests (see `files`)",
+      "description": "URL against which to run the provided tests",
       "env": "TEST_URL"
     },
     "files": {
@@ -67,6 +73,7 @@
     }
   },
   "devDependencies": {
+    "tap-difflet": "^0.4.0",
     "tape": "^4.5.1"
   }
 }
