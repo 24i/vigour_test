@@ -34,13 +34,14 @@
   "dependencies": {
     "browserify": "^13.0.0",
     "get-port": "^2.1.0",
-    "lodash.template": "^4.2.2",
-    "nightmare": "^2.2.0",
+    "lodash.template": "^4.2.4",
+    "nightmare": "^2.3.1",
     "nightmare-evaluate-async": "^0.1.4",
-    "object-inspect": "^1.1.0",
-    "vigour-config": "^1.0.3",
+    "object-inspect": "^1.2.1",
+    "vigour-config": "^1.0.4",
     "vigour-fs-promised": "^2.0.2",
-    "vigour-spawn": "^1.0.6"
+    "vigour-spawn": "^1.0.7",
+    "vigour-util": "^2.0.5"
   },
   "engines": {
     "node": ">=4"
