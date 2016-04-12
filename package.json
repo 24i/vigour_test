@@ -1,6 +1,6 @@
 {
   "name": "vigour-test",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Test runner for universal modules",
   "main": "lib/index.js",
   "bin": {
